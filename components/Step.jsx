@@ -1,10 +1,4 @@
-export default function Step({
-  title,
-  children,
-}: {
-  title: string
-  children: React.ReactNode
-}) {
+export default function Step({ title, children }) {
   return (
     <li className="mx-4">
       <input type="checkbox" id={title} className={`mr-2 peer`} />
@@ -20,5 +14,5 @@ export default function Step({
         {children}
       </div>
     </li>
-  )
+  );
 }
