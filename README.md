@@ -16,6 +16,7 @@ This blog is built using Next.js 14 and utilizes Sanity IO for content managemen
 4. [Customization](#customization)
 5. [Contributing](#contributing)
 6. [License](#license)
+7. [Acknowledgments](#acknowledgments)
 
 ## Installation
 
@@ -87,3 +88,7 @@ Submit a pull request
 
 ## License
 This project is licensed under the MIT License.
+
+## Acknowledgments
+
+Special thanks to @ski043 for inspiring and paving the way for this blog. 🙌
