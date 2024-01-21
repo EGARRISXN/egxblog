@@ -20,13 +20,12 @@ async function getData(slug) {
 
 export default async function BlogPost({ params }) {
   const data = await getData(params.slug);
-  console.log(data);
 
   return (
     <div className="mt-8">
       <h1>
         <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
-          World by E.
+          "Spend a little time inside my mind."
         </span>
         <span className="mt-4 block text-2xl text-center leading-8 font-bold tracking-tight">
           {data.title}
@@ -38,7 +37,7 @@ export default async function BlogPost({ params }) {
         width={800}
         height={800}
         priority
-        className="rounded-lg mx-auto mt-8 h-[200px] object-cover border"
+        className="rounded-lg mx-auto mt-8 h-[400px] object-cover border"
       />
 
       <div className="mt-12 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
@@ -46,7 +45,7 @@ export default async function BlogPost({ params }) {
       </div>
 
       <Link href="/">
-        <div className="my-8 block  text-primary tracking-wide uppercase hover:font-bold rounded-lg border p-2 text-center">
+        <div className="my-8 block text-primary tracking-wide uppercase hover:font-bold rounded-lg border w-[200px] p-2 mx-auto text-center">
           Return Home
         </div>
       </Link>

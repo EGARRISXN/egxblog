@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Header />
-          <main className="mx-auto max-w-2xl px-4">{children}</main>
+          <main className="mx-auto max-w-3xl px-4">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
