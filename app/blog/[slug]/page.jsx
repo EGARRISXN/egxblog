@@ -1,6 +1,7 @@
 import { client, urlFor } from "@/lib/sanityClient";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const revalidate = 60; // revalidate at 60 seconds
 
@@ -43,6 +44,12 @@ export default async function BlogPost({ params }) {
       <div className="mt-12 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
         <PortableText value={data.content} />
       </div>
+
+      <Link href="/">
+        <div className="my-8 block  text-primary tracking-wide uppercase hover:font-bold rounded-lg border p-2 text-center">
+          Return Home
+        </div>
+      </Link>
     </div>
   );
 }

@@ -24,15 +24,15 @@ export default async function Home() {
   const data = await getData();
 
   return (
-    <main className="grid grid-cols-1 md:grid-cols-2 mt-4 gap-4">
+    <main className="grid grid-cols-1 sm:grid-cols-2 mt-4 gap-4">
       {data.map((post, idx) => (
         <Card key={idx}>
           <Image
             src={urlFor(post.coverImage).url()}
             alt="image"
-            width={500}
-            height={500}
-            className="rounded-lg mx-auto h-[200px] object-cover border"
+            width={600}
+            height={600}
+            className="rounded-t-lg mx-auto h-[200px] object-cover border"
           />
           <CardContent className="mt-4">
             <h2 className="text-lg font-bold line-clamp-2">{post.title}</h2>

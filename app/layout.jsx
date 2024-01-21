@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/Theme-Provider";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "egxblog",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         >
           <Header />
           <main className="mx-auto max-w-2xl px-4">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
