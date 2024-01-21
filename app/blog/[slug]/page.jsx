@@ -2,6 +2,8 @@ import { client, urlFor } from "@/lib/sanityClient";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 
+export const revalidate = 60; // revalidate at 60 seconds
+
 async function getData(slug) {
   const query = `
 *[_type == 'blog' && slug.current == '${slug}'] {

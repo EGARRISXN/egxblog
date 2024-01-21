@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 60; // revalidate at 30 seconds
+
 async function getData() {
   const query = `
  *[_type == 'blog'] | order(_createdAt desc) {
@@ -30,7 +32,7 @@ export default async function Home() {
             alt="image"
             width={500}
             height={500}
-            className="rounded-lg mx-auto h-[200px] object-cover"
+            className="rounded-lg mx-auto h-[200px] object-cover border"
           />
           <CardContent className="mt-4">
             <h2 className="text-lg font-bold line-clamp-2">{post.title}</h2>
