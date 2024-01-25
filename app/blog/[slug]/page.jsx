@@ -1,5 +1,6 @@
 import { client, urlFor } from "@/lib/sanityClient";
 import { PortableText } from "@portabletext/react";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,7 +26,7 @@ export default async function BlogPost({ params }) {
     <div className="mt-8">
       <h1>
         <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
-          "Spend a little time inside my mind."
+          "Spend a little time inside my head."
         </span>
         <span className="mt-4 block text-2xl text-center leading-8 font-bold tracking-tight">
           {data.title}
@@ -44,11 +45,9 @@ export default async function BlogPost({ params }) {
         <PortableText value={data.content} />
       </div>
 
-      <Link href="/">
-        <div className="my-8 block text-primary tracking-wide uppercase hover:font-bold rounded-lg border w-[200px] p-2 mx-auto text-center">
-          Return Home
-        </div>
-      </Link>
+      <Button asChild variant="destructive" className="flex mx-auto w-80 my-12">
+        <Link href="/">Return Home</Link>
+      </Button>
     </div>
   );
 }

@@ -6,16 +6,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "egxblog",
-  description: "You have to start somewhere.",
+  title: "EG. | Blog",
+  description: "Talk to your head off.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable} scroll-smooth antialiased`}
-    >
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="x">
         <ThemeProvider
           attribute="class"
@@ -24,7 +21,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Header />
-          <main className="mx-auto max-w-3xl px-4">{children}</main>
+          <main>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

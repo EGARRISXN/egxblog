@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*! Shadcn-UI */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -49,6 +50,7 @@
   }
 }
 
+/*! App */
 @layer base {
   * {
     @apply border-border;
@@ -56,4 +58,32 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html {
+  @apply scroll-smooth antialiased;
+}
+main {
+  @apply mx-auto max-w-3xl px-4;
+}
+
+/*! Scrollbar */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #ffffff;
+}
+/* Chrome & Others */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
 }
