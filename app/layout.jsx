@@ -2,13 +2,14 @@ import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/Theme-Provider";
+import { Analytics } from "@vercel/analytics/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  metadataBase: new URL("https://egxblog.vercel.app/"),
+  metadataBase: new URL("https://www.egxblog.net/"),
   title: "EG. | Blog",
-  description: "The Official Blog for Ethan G.",
+  description: "A Blog by Ethan.",
   referrer: "origin-when-cross-origin",
   keywords: [
     "ethan_g, eg, EG., Ethan G., ethan-g, egarrisxn, egxblog, ethan garrison, ethan-garrison, ethan_garrison, ethan-garrison, blog, nextjs, shadcn-ui, tailwindcss, javascript, reactjs",
@@ -29,16 +30,16 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     title: "EG. | Blog",
-    description: "The Official Blog for Ethan G",
-    url: "https://egxblog.vercel.app/",
-    siteName: "egxblog.vercel.app",
+    description: "A Blog by Ethan.",
+    url: "https://www.egxblog.net/",
+    siteName: "egxblog.net",
   },
   twitter: {
     cardType: "summary_large_image",
     handle: "@e____g_______",
     site: "@e____g_______",
     title: "EG. | Blog",
-    description: "The Official Blog for Ethan G",
+    description: "A Blog by Ethan.",
   },
 };
 
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
