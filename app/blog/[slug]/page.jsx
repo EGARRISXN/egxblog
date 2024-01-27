@@ -24,6 +24,11 @@ export default async function BlogPost({ params }) {
 
   return (
     <div className="mt-8">
+      <div className="mb-8">
+        <Link href="/" className="hover:text-green-400">
+          ← Home
+        </Link>
+      </div>
       <h1>
         <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
           "Spend a little time inside my head."
@@ -40,14 +45,28 @@ export default async function BlogPost({ params }) {
         priority
         className="rounded-lg mx-auto mt-8 h-[400px] object-cover border"
       />
-
       <div className="mt-12 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
         <PortableText value={data.content} />
       </div>
-
-      <Button asChild variant="destructive" className="flex mx-auto w-80 my-12">
-        <Link href="/">Return Home</Link>
+      <Button asChild variant="destructive" className="flex mx-auto w-60 my-12">
+        <Link href="/">Return</Link>
       </Button>
+      <div className="text-center w-fit mx-auto prose lg:prose-lg text-sm border text-foreground rounded-lg px-8 py-4 my-12">
+        If you'd like to support my work,
+        <br />
+        <Link
+          href="https://www.buymeacoffee.com/egarrisxn"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-foreground no-underline"
+        >
+          consider buying me a coffee{" "}
+          <span className="text-green-400 hover:text-yellow-400 hover:underline hover:underline-offset-4 no-underline">
+            here
+          </span>
+          !
+        </Link>
+      </div>
     </div>
   );
 }

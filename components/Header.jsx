@@ -1,21 +1,25 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/Theme-Toggle";
 
 export default function Header() {
   return (
-    <header className="max-w-3xl flex justify-between mx-auto w-full p-4 border-b-2">
-      <div className="flex items-center">
+    <header className="max-w-3xl flex justify-between mx-auto w-full py-4 border-b-2">
+      <div className="flex">
         <Link href="/">
-          <h1 className="text-xl font-bold text-foreground">
+          <Button
+            variant="link"
+            className="font-bold text-2xl text-foreground no-underline hover:no-underline"
+          >
             eg<span className="text-primary">xblog</span>
-          </h1>
+          </Button>
         </Link>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex gap-2 px-4">
         <Link href="https://egxworld.net/">
-          <h1 className="text-xl hover:underline hover:underline-offset-4 hover:text-primary">
-            personal site
-          </h1>
+          <Button variant="outline" className="text-foreground">
+            egxworld
+          </Button>
         </Link>
         <ThemeToggle />
       </div>
