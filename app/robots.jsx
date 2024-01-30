@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://egxblog.vercel.app/sitemap.xml",
+    sitemap: "https://egxblog.net/sitemap.xml",
   };
 }
