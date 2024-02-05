@@ -4,7 +4,7 @@ import {client, urlFor} from '@/lib/sanityClient'
 import {Card, CardContent} from '@/components/ui/card'
 import {Button} from '@/components/ui/button'
 
-export const revalidate = 60 // revalidate at 30 seconds
+export const revalidate = 300 // revalidate at 5 minutes
 
 async function getData() {
   const query = `
@@ -14,9 +14,7 @@ async function getData() {
       "currentSlug": slug.current,
       coverImage
   }`
-
   const data = await client.fetch(query)
-
   return data
 }
 

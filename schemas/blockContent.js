@@ -6,13 +6,21 @@
  *  }
  */
 
+const HighlightIcon = () => <span style={{fontWeight: 'bold'}}>H</span>
+
+const HighlightDecorator = (props) => (
+  <span style={{backgroundColor: 'yellow'}}>{props.children}</span>
+)
+
 export default {
-  title: 'Block Content',
   name: 'blockContent',
+  title: 'Block Content',
   type: 'array',
+  options: {
+    spellCheck: true,
+  },
   of: [
     {
-      title: 'Block',
       type: 'block',
       // Styles let you set what your user can mark up blocks with. These correspond with HTML tags, but you can set any title or value you want and decide how you want to deal with it where you want to use your content.
       styles: [
@@ -21,20 +29,33 @@ export default {
         {title: 'H2', value: 'h2'},
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
+        {title: 'H5', value: 'h5'},
+        {title: 'H6', value: 'h6'},
         {title: 'Quote', value: 'blockquote'},
       ],
-      lists: [{title: 'Bullet', value: 'bullet'}],
+      lists: [
+        {title: 'Bullet', value: 'bullet'},
+        {title: 'Numbered', value: 'number'},
+      ],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic preference or highlighting by editors.
         decorators: [
           {title: 'Strong', value: 'strong'},
           {title: 'Emphasis', value: 'em'},
+          {title: 'Code', value: 'code'},
+          {title: 'Underline', value: 'underline'},
+          {
+            title: 'Highlight',
+            value: 'highlight',
+            icon: HighlightIcon,
+            component: HighlightDecorator,
+          },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'URL',
+            title: 'External Link',
             name: 'link',
             type: 'object',
             fields: [
@@ -43,6 +64,11 @@ export default {
                 name: 'href',
                 type: 'url',
               },
+              {
+                title: 'Open in new tab',
+                name: 'blank',
+                type: 'boolean',
+              },
             ],
           },
         ],
@@ -50,15 +76,34 @@ export default {
     },
     // You can add additional types here. Note that you can"t use primitive types such as "string" and "number" in the same array as a block type.
     {
+      name: 'image',
+      title: 'Image',
       type: 'image',
       options: {hotspot: true},
       fields: [
         {
           name: 'alt',
-          type: 'string',
           title: 'Alternative Text',
+          type: 'string',
         },
       ],
+    },
+    {
+      name: 'favoriteColor',
+      title: 'Color List',
+      type: 'color',
+      options: {
+        colorList: [
+          '#FF6900',
+          {hex: '#FCB900'},
+          {r: 123, g: 220, b: 181},
+          {r: 0, g: 208, b: 132, a: 0.5},
+          {h: 203, s: 95, l: 77, a: 1},
+          {h: 202, s: 95, l: 46, a: 0.5},
+          {h: 345, s: 43, v: 97},
+          {h: 344, s: 91, v: 92, a: 0.5},
+        ],
+      },
     },
   ],
 }

@@ -4,7 +4,7 @@ import {client, urlFor} from '@/lib/sanityClient'
 import {PortableText} from '@portabletext/react'
 import {Button} from '@/components/ui/button'
 
-export const revalidate = 60 // revalidate at 60 seconds
+export const revalidate = 300 // revalidate at 5 minutes
 
 async function getData(slug) {
   const query = `

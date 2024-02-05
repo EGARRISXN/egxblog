@@ -1,3 +1,5 @@
+import {FaBeer} from 'react-icons/fa'
+
 export default {
   name: 'post',
   title: 'Post',
@@ -50,12 +52,16 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'video',
+      title: 'Video',
+      type: 'youtubeVideo',
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
     },
   ],
-
   preview: {
     select: {
       title: 'title',
