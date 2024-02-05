@@ -1,12 +1,12 @@
-import SocialIcons from "@/lib/socialIcons";
+import SocialIcons from '@/lib/socialIcons'
 
 export default function Footer() {
   return (
-    <div className="max-w-3xl w-full flex mx-auto p-4 items-center justify-between border-t-2">
-      <div className="flex text-sm sm:text-base">© 2024 EG.</div>
-      <div className="flex gap-4">
+    <div className='mx-auto flex w-full max-w-3xl items-center justify-between border-t-2 p-4'>
+      <div className='flex text-sm sm:text-base'>© 2024 EG.</div>
+      <div className='flex gap-4'>
         <SocialIcons />
       </div>
     </div>
-  );
+  )
 }

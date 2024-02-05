@@ -43,7 +43,6 @@ npm run dev
 
 Visit http://localhost:3000 in your browser to view the blog.
 
-
 Building for Production:
 
 To build the blog for production, use:
@@ -87,6 +86,7 @@ Make your changes
 Submit a pull request
 
 ## License
+
 This project is licensed under the MIT License.
 
 ## Acknowledgments

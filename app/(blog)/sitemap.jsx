@@ -1,10 +1,10 @@
 export default function sitemap() {
   return [
     {
-      url: "https://egxblog.net/",
+      url: 'https://egxblog.net/',
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: 'weekly',
       priority: 1,
     },
-  ];
+  ]
 }
