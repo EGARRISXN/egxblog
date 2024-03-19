@@ -1,10 +1,7 @@
-import {FaBeer} from 'react-icons/fa'
-
 export default {
   name: 'blog',
   title: 'Blog',
   type: 'document',
-  icon: FaBeer,
   fields: [
     {
       name: 'title',
@@ -21,6 +18,12 @@ export default {
         maxLength: 96,
       },
       description: 'Post slug',
+    },
+    {
+      name: 'author',
+      title: 'Author',
+      type: 'reference',
+      to: {type: 'author'},
     },
     {
       name: 'coverImage',
@@ -42,19 +45,20 @@ export default {
       description: 'Small description of post',
     },
     {
+      name: 'content',
+      title: 'Content',
+      type: 'blockContent',
+    },
+    {
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
-    },
-    {
-      name: 'video',
-      title: 'Video',
-      type: 'youtubeVideo',
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
     },
   ],
   preview: {

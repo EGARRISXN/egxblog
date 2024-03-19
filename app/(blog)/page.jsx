@@ -4,7 +4,7 @@ import {client, urlFor} from '@/lib/sanityClient'
 import {Card, CardContent} from '@/components/ui/card'
 import {Button} from '@/components/ui/button'
 
-export const revalidate = 300 // revalidate at 5 minutes
+export const revalidate = 60
 
 async function getData() {
   const query = `
@@ -23,22 +23,22 @@ export default async function Home() {
 
   return (
     <main className='my-4 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2'>
-      {data.map((post, idx) => (
+      {data.map((blog, idx) => (
         <Card key={idx}>
           <Image
-            src={urlFor(post.coverImage).url()}
+            src={urlFor(blog.coverImage).url()}
             alt='image'
             width={600}
             height={600}
             className='mx-auto h-[200px] rounded-t-lg border object-cover'
           />
           <CardContent className='mt-4'>
-            <h2 className='line-clamp-2 text-lg font-bold'>{post.title}</h2>
+            <h2 className='line-clamp-2 text-lg font-bold'>{blog.title}</h2>
             <p className='mt-2 line-clamp-3 text-sm text-gray-700 dark:text-gray-400'>
-              {post.smallDescription}
+              {blog.smallDescription}
             </p>
             <Button asChild className='mt-4 w-full'>
-              <Link href={`/blog/${post.currentSlug}`}>Read More</Link>
+              <Link href={`/blog/${blog.currentSlug}`}>Read More</Link>
             </Button>
           </CardContent>
         </Card>
