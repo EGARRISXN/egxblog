@@ -13,14 +13,14 @@ This blog is built using Next.js 14 and utilizes Sanity IO for content managemen
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Technologies Used](#technologies-used)
-4. [Customization](#customization)
-5. [Contributing](#contributing)
+4. [Configuration](#configuration)
+5. [Customization](#customization)
 6. [License](#license)
 7. [Acknowledgments](#acknowledgments)
 
 ## Installation
 
-Follow these steps to set up the project locally:
+An example of how to set up the project locally:
 
 ```bash
 # Clone the repository
@@ -65,25 +65,19 @@ Visit http://localhost:3000 to access the production version.
 
 ## Technologies Used
 
-Next.js 14
-Sanity IO
-Shadcn UI
+Next.js
+Sanity
 Tailwind CSS
-Configuration
+Etc.
+
+## Configuration
+
 No special configuration is required for basic usage. However, check the configuration files for any specific settings.
 
 ## Customization
 
 Feel free to customize the blog to suit your preferences.
 Explore the codebase and make changes accordingly.
-
-## Contributing
-
-If you'd like to contribute, please follow these guidelines:
-Fork the repository
-Create a new branch
-Make your changes
-Submit a pull request
 
 ## License
 
