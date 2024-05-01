@@ -36,8 +36,8 @@ export const metadata = {
   },
   twitter: {
     cardType: 'summary_large_image',
-    handle: '@e____g_______',
-    site: '@e____g_______',
+    handle: 'eg_xo_',
+    site: 'https://twitter.com/eg_xo_',
     title: 'EG. | Blog',
     description:'SPEND A LITTLE TIME INSIDE MY HEAD.',
   },
