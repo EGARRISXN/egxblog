@@ -13,7 +13,7 @@ This blog is built using Next.js 14 and utilizes the power of Sanity.io for cont
 - Sanity
 - Nextsjs
 - React
-- Javascript
+- JavaScript
 - TailwindCSS
 - Shadcn/UI
 
