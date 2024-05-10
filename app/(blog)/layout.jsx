@@ -12,9 +12,9 @@ export const metadata = {
   description: 'SPEND A LITTLE TIME INSIDE MY HEAD.',
   referrer: 'origin-when-cross-origin',
   keywords: [
-    'ethan_g, eg, EG, ethan-g, egarrisxn, egxblog, ethangarrison, ethan-garrison, ethan_garrison, blog, nextjs, shadcn-ui, tailwindcss, javascript, reactjs',
+    'ethan_g, eg, EG, ethan-g, egarrisxn, egxblog, ethangarrison, ethan-garrison, ethan_garrison, blog, nextjs, next, next14, sanity, sanityio, shadcn-ui, shadcn/ui, tailwindcss, javascript, react',
   ],
-  creator: {name: 'Ethan Garrison', url: 'https://github.com/EGARRISXN'},
+  creator: {name: 'Ethan Garrison', url: 'https://github.com/egarrisxn'},
   robots: {
     index: true,
     follow: true,
@@ -39,7 +39,7 @@ export const metadata = {
     handle: 'eg_xo_',
     site: 'https://twitter.com/eg_xo_',
     title: 'EG. | Blog',
-    description:'SPEND A LITTLE TIME INSIDE MY HEAD.',
+    description: 'SPEND A LITTLE TIME INSIDE MY HEAD.',
   },
 }
 
