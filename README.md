@@ -2,7 +2,7 @@
 
 Welcome to my personal blog.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![GitHub repo size](https://img.shields.io/github/repo-size/egarrisxn/egxblog)
 
 ## Overview
 
@@ -13,7 +13,7 @@ This blog is built using Next.js 14 and utilizes the power of Sanity.io for cont
 - Sanity
 - Nextsjs
 - React
-- Javascript
+- JavaScript
 - TailwindCSS
 - Shadcn/UI
 
