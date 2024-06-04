@@ -1,19 +1,10 @@
-import {metadata as studioMetadata} from 'next-sanity/studio/metadata'
-import {viewport as studioViewport} from 'next-sanity/studio/viewport'
-import {Studio} from './Studio'
+import {NextStudio} from 'next-sanity/studio'
+import config from '../../../../sanity.config'
 
 export const dynamic = 'force-static'
 
-export const metadata = {
-  ...studioMetadata,
-  title: 'Loading Studio…',
-}
-
-export const viewport = {
-  ...studioViewport,
-  interactiveWidget: 'resizes-content',
-}
+export {metadata, viewport} from 'next-sanity/studio'
 
 export default function StudioPage() {
-  return <Studio />
+  return <NextStudio config={config} />
 }
