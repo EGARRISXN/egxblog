@@ -26,7 +26,6 @@
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
   }
-
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
@@ -49,8 +48,6 @@
     --ring: 142.4 71.8% 29.2%;
   }
 }
-
-/*! App */
 @layer base {
   * {
     @apply border-border;
@@ -59,11 +56,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+/*! App */
 html {
-  @apply scroll-smooth antialiased;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 main {
-  @apply mx-auto max-w-3xl px-4;
+  @apply mx-auto max-w-4xl px-1 sm:px-4;
 }
 
 /*! Scrollbar */

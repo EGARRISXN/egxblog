@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import {client, urlFor} from '@/lib/sanityClient'
+import {client, urlFor} from '../../../../lib/sanityClient'
+import {Button} from '../../../../components/ui/button'
 import {PortableText} from '@portabletext/react'
-import {Button} from '@/components/ui/button'
 
 async function getData(slug) {
   const query = `
@@ -21,7 +21,7 @@ export default async function BlogPost({params}) {
   const data = await getData(params.slug)
 
   return (
-    <div className='mt-8'>
+    <main className='mt-8'>
       <div className='mb-8'>
         <Link href='/' className='hover:text-green-400'>
           ← Home
@@ -38,33 +38,29 @@ export default async function BlogPost({params}) {
       <Image
         src={urlFor(data.coverImage).url()}
         alt='image'
-        width={800}
-        height={800}
-        priority
-        className='mx-auto mt-8 h-[400px] rounded-lg border object-cover'
+        width={825}
+        height={435}
+        className='mx-auto mt-8 rounded-lg border object-cover'
       />
-      <div className='prose prose-lg prose-blue mt-12 dark:prose-invert prose-a:text-primary prose-li:marker:text-primary'>
+      <div className='prose prose-lg prose-blue mx-auto mt-12 max-w-[800px] dark:prose-invert prose-a:text-primary prose-li:marker:text-primary'>
         <PortableText value={data.content} />
       </div>
-      <Button asChild variant='destructive' className='mx-auto my-12 flex w-60'>
+      <Button asChild variant='destructive' className='mx-auto my-12 flex w-80'>
         <Link href='/'>Return</Link>
       </Button>
-      <div className='prose mx-auto my-12 w-fit rounded-lg border px-8 py-4 text-center text-sm text-foreground lg:prose-lg'>
+      <div className='prose prose-sm mx-auto my-12 w-fit rounded-lg border p-8 text-center text-foreground lg:prose-lg'>
         If you'd like to support my work,
         <br />
         <Link
           href='https://www.buymeacoffee.com/egarrisxn'
           target='_blank'
           rel='noopener noreferrer'
-          className='font-bold text-foreground no-underline'
+          className='text-foreground no-underline'
         >
           consider buying me a coffee{' '}
-          <span className='text-green-400 no-underline hover:text-yellow-400 hover:underline hover:underline-offset-4'>
-            here
-          </span>
-          !
+          <span className='text-green-400 no-underline hover:text-green-600'>here!</span>
         </Link>
       </div>
-    </div>
+    </main>
   )
 }

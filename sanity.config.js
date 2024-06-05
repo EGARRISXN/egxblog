@@ -2,16 +2,16 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {media} from 'sanity-plugin-media'
-import {title, basePath, projectId, dataset, apiVersion} from './lib/env.js'
-import {schemaTypes} from './schemas'
+import {title, basePath, projectId, dataset} from './lib/api.js'
+import {schemaTypes} from './schemas/index.js'
 
 export default defineConfig({
-  title: title,
-  basePath: basePath,
-  projectId: projectId,
-  dataset: dataset,
-  plugins: [structureTool(), media()],
+  title,
+  basePath,
+  projectId: projectId || '',
+  dataset: dataset || '',
   schema: {
     types: schemaTypes,
   },
+  plugins: [structureTool(), media()],
 })
