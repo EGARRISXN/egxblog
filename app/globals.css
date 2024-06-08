@@ -57,16 +57,13 @@
   }
 }
 
-/*! App */
+/*! Html */
 html {
   overflow-x: hidden;
   overscroll-behavior: none;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-main {
-  @apply mx-auto max-w-4xl px-1 sm:px-4;
 }
 
 /*! Scrollbar */
@@ -84,7 +81,6 @@ main {
   background: #000000;
   border-radius: 5px;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #ffffff;

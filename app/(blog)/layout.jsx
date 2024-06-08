@@ -5,7 +5,7 @@ export default function AppLayout({children}) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className='mx-auto max-w-7xl px-1 sm:px-4'>{children}</main>
       <Footer />
     </>
   )

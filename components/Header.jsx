@@ -15,28 +15,29 @@ export default function Header() {
   const {setTheme} = useTheme()
 
   return (
-    <header className='mx-auto flex w-full max-w-4xl justify-between border-b-2 py-4'>
-      <div className='flex'>
+    <header className='mx-auto flex w-full max-w-7xl justify-between border-b-2 py-4'>
+      <section className='flex'>
         <Link href='/'>
           <Button
             variant='link'
-            className='text-2xl font-bold text-foreground no-underline hover:no-underline'
+            className='text-2xl font-bold text-foreground no-underline hover:no-underline 2xl:text-4xl'
           >
             eg<span className='text-primary'>xblog</span>
           </Button>
         </Link>
-      </div>
-      <div className='flex gap-2 px-4'>
-        <Link href='https://egxworld.net/'>
-          <Button variant='outline' className='text-foreground'>
+      </section>
+      <section className='flex gap-2 px-4'>
+        <Button variant='outline' className='text-foreground'>
+          <Link href='https://egxworld.net/' className='2xl:text-lg'>
             egxworld
-          </Button>
-        </Link>
+          </Link>
+        </Button>
+
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant='outline' size='icon'>
-              <SunIcon className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
-              <MoonIcon className='absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
+              <SunIcon className='size-[1.2rem] rotate-0 scale-100 transition-all 2xl:size-[1.5rem] dark:-rotate-90 dark:scale-0' />
+              <MoonIcon className='absolute size-[1.2rem] rotate-90 scale-0 transition-all 2xl:size-[1.5rem] dark:rotate-0 dark:scale-100' />
               <span className='sr-only'>Toggle theme</span>
             </Button>
           </DropdownMenuTrigger>
@@ -46,7 +47,7 @@ export default function Header() {
             <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-      </div>
+      </section>
     </header>
   )
 }

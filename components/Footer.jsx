@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <div className='mx-auto flex w-full max-w-4xl items-center justify-between border-t-2 p-4'>
-      <div className='flex'>EG2024</div>
-      <div className='flex gap-3'>
+    <footer className='mx-auto flex w-full max-w-7xl items-center justify-between border-t-2 p-4'>
+      <section className='flex 2xl:text-xl'>EG | 2024</section>
+      <section className='flex gap-3 2xl:text-xl'>
         <a href='https://github.com/egarrisxn' target='_blank' rel='noopener noreferrer'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -124,7 +124,7 @@ export default function Footer() {
             </g>
           </svg>
         </a>
-      </div>
-    </div>
+      </section>
+    </footer>
   )
 }
