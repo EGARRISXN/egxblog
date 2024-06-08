@@ -8,7 +8,7 @@ Welcome to my personal blog.
 
 This blog is built using Next.js 14 and utilizes the power of Sanity.io for content management. The UI is enhanced with Shadcn/UI components and styled with TailwindCSS. Explore the latest features and enjoy a seamless blogging experience.
 
-![egxblog](https://github.com/egarrisxn/egxblog/assets/126130230/328c4196-2594-4630-83a6-eed87019bb4c)
+![egxblog3](https://github.com/egarrisxn/egxblog/assets/126130230/e617343a-5a1a-4a00-a57f-b2b785bb27bb)
 
 ## Technologies
 
